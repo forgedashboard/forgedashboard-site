@@ -247,6 +247,14 @@ nav{
   transition:background .2s,transform .15s;
 }
 .banner-cta:hover{background:#111;transform:translateY(-2px)}
+/* Secondary link on the orange banner: dark, not --mid (#aaa is 1.2:1 on orange; this is 5.4:1). */
+.banner-pdf{
+  display:block;width:max-content;max-width:100%;margin:18px auto 0;
+  font-size:14px;font-weight:500;color:rgba(0,0,0,0.75);
+  text-decoration:underline;text-underline-offset:3px;
+  transition:color .2s;
+}
+.banner-pdf:hover{color:#000}
 
 /* ── FOOTER (same as the homepage) ── */
 footer{
@@ -465,6 +473,7 @@ footer{
 <div class="cta-banner">
   <h2 class="banner-h">Try it free for 14 days.</h2>
   <a href="https://app.forgedashboard.com/signup" class="banner-cta">Start Free Trial →</a>
+  <a href="/forge-features.pdf" class="banner-pdf" download>Download the one-page PDF</a>
 </div>
 
 </main>
