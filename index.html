@@ -925,8 +925,9 @@ footer{
       <div class="p-card hot">
         <div class="p-badge">Most Popular</div>
         <div class="p-name">Pro</div>
-        <div class="p-price" data-monthly="229" data-annual="1832"><sup>$</sup><span class="pval">229</span></div>
+        <div class="p-price" data-monthly="299" data-annual="2,388"><sup>$</sup><span class="pval">299</span></div>
         <div class="p-period pperiod">/month</div>
+        <div class="p-period pnote" data-monthly="" data-annual="$199/mo billed annually"></div>
         <ul class="p-list">
           <li>Unlimited users</li>
           <li>Unlimited projects</li>
@@ -1036,6 +1037,9 @@ function setPricing(interval, btn) {
   });
   document.querySelectorAll('.pperiod').forEach(el => {
     el.textContent = interval === 'annual' ? '/year' : '/month';
+  });
+  document.querySelectorAll('.pnote').forEach(el => {
+    el.textContent = el.dataset[interval];
   });
 }
 function toggleFaq(btn) {
