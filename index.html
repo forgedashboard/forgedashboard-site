@@ -629,6 +629,13 @@ footer{
   .footer-legal{justify-content:center}
   .cta-banner{padding:60px 20px}
 }
+/* Phones: the four hero stats (451px in a row) become a 2x2 grid so the last one isn't cut off. */
+@media(max-width:520px){
+  .hero-proof{display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:100%}
+  .proof-stat{padding:16px 12px}
+  .proof-stat:nth-child(odd)::before{display:none}
+  .proof-stat:nth-child(n+3){border-top:1px solid var(--border)}
+}
 </style>
 </head>
 <body>
